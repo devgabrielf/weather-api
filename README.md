@@ -48,7 +48,7 @@ Caso a cidade ou coordenadas informadas não seja encontrada, a API retornará e
     
 ### Busca pelas coordenadas
 
-`GET /weather?city=belo%20horizonte`
+`GET /weather?lat=-19.9678&lon=-44.1983`
 
     curl -X 'GET' \ 'http://localhost:3333/weather?lat=-19.9678&lon=-44.1983' \ -H 'accept: */*'
 
