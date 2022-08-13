@@ -1,0 +1,48 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "Weather API",
+    "description": "API REST para obtenção de temperatura, umidade e status de alerta de uma cidade.",
+    "version": "1.0.0",
+    "contact": {
+      "email": "gabriel.ferreira5584@gmail.com"
+    }
+  },
+  "paths": {
+    "/weather": {
+      "get": {
+        "tags": ["Weather"],
+        "description": "Informe apenas o nome da cidade ou as coordenadas, não os dois.",
+        "parameters": [
+          {
+            "in": "query",
+            "name": "city",
+            "description": "Nome da cidade",
+            "example": "Belo Horizonte"
+          },
+          {
+            "in": "query",
+            "name": "lat",
+            "description": "Latitude"
+          },
+          {
+            "in": "query",
+            "name": "lon",
+            "description": "Longitude"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "400": {
+            "description": "Informe o nome da cidade ou usuas coordenadas"
+          },
+          "404": {
+            "description": "Cidade não encontrada"
+          }
+        }
+      }
+    }
+  }
+}
